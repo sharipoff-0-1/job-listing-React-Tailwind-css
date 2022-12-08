@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="mb-4">
+      <header className="mb-20">
         <img
           className="w-full bg-teal-600"
           src="./assets/images/bg-header-desktop.svg"
