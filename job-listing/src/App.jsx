@@ -10,8 +10,14 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-3xl">hellooooooooo</h1>
+    <div className="App">
+      <header className="mb-4">
+        <img
+          className="w-full bg-teal-600"
+          src="./assets/images/bg-header-desktop.svg"
+          alt="bg-image"
+        />
+      </header>
       {jobs.length === 0 ? (
         <p>jobs are fetching...</p>
       ) : (
