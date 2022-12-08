@@ -39,10 +39,18 @@ function JobBoard({
     tags.push(...tools);
   }
   return (
-    <div className="flex items-center justify-between bg-white shadow-md m-4 p-6 rounded-md">
-      <div className="flex items-center ">
-        <img src={`/assets${logo}`} alt={company} />
-        <div className="ml-4">
+    <div
+      className={`flex flex-col justify-between bg-white shadow-md mx-4 p-4 mb-16 rounded ${
+        featured && "border-l-4 border-teal-500 border-solid"
+      }`}
+    >
+      <div className="flex flex-col mb-4 ">
+        <img
+          className="w-14 h-14 -mt-12 mb-4"
+          src={`/assets${logo}`}
+          alt={company}
+        />
+        <div className="ml-1">
           <h3 className="text-teal-500 font-bold">
             {company}
             {isNew && (
@@ -51,7 +59,7 @@ function JobBoard({
               </span>
             )}
             {featured && (
-              <span className="mx-2 p-1 px-2 text-white text-sm rounded-xl bg-slate-800">
+              <span className="mx-2 p-1 px-2 text-white text-sm rounded-xl bg-slate-8di00">
                 FEATURED
               </span>
             )}
@@ -62,11 +70,11 @@ function JobBoard({
           </p>
         </div>
       </div>
+      <span className="border w-full bg-gray-600 mb-4"></span>
       <div>
-        <span></span>
         {tags
           ? tags.map((tag) => (
-              <span className="text-teal-600 font-bold text-sm mx-2 p-2 bg-teal-50 rounded ">
+              <span className="text-teal-600 font-bold text-sm mx-1 p-2 bg-teal-50 rounded ">
                 {tag}
               </span>
             ))
