@@ -40,17 +40,17 @@ function JobBoard({
   }
   return (
     <div
-      className={`flex flex-col justify-between bg-white shadow-md mx-4 p-4 mb-16 rounded ${
+      className={`flex flex-col sm:flex-row sm:items-center justify-between bg-white shadow-md mx-4 p-4 mb-16 sm:mb-6 rounded ${
         featured && "border-l-4 border-teal-500 border-solid"
       }`}
     >
-      <div className="flex flex-col mb-4 ">
+      <div className="flex flex-col mb-4 sm:flex-row">
         <img
-          className="w-14 h-14 -mt-12 mb-4"
+          className="w-14 h-14 -mt-12 mb-4 sm:mt-0 sm:w-20 sm:h-20 sm:mb-0"
           src={`/assets${logo}`}
           alt={company}
         />
-        <div className="ml-1">
+        <div className="ml-1 sm:ml-4 ">
           <h3 className="text-teal-500 font-bold">
             {company}
             {isNew && (
@@ -70,11 +70,10 @@ function JobBoard({
           </p>
         </div>
       </div>
-      <span className="border w-full bg-gray-600 mb-4"></span>
-      <div>
+      <div className=" border-t-2 py-5 flex flex-wrap sm:border-0 justify-items-end pr-2">
         {tags
           ? tags.map((tag) => (
-              <span className="text-teal-600 font-bold text-sm mx-1 p-2 bg-teal-50 rounded ">
+              <span className="text-teal-600 font-bold text-sm mx-1 mb-3 p-2 bg-teal-50 rounded ">
                 {tag}
               </span>
             ))
