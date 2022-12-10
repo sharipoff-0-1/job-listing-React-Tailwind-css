@@ -29,6 +29,7 @@ function JobBoard({
     languages,
     tools,
   },
+  handleTagClick,
 }) {
   const tags = [role, level];
 
@@ -73,7 +74,10 @@ function JobBoard({
       <div className=" border-t-2 py-5 flex flex-wrap sm:border-0 justify-items-end pr-2">
         {tags
           ? tags.map((tag) => (
-              <span className="text-teal-600 font-bold text-sm mx-1 mb-3 p-2 bg-teal-50 rounded ">
+              <span
+                onClick={() => handleTagClick(tag)}
+                className="cursor-pointer text-teal-600 font-bold text-sm mx-1 mb-3 p-2 bg-teal-50 rounded "
+              >
                 {tag}
               </span>
             ))
