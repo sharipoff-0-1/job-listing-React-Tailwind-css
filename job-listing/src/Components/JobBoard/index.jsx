@@ -1,19 +1,5 @@
 import React from "react";
 
-// "id": 1,
-//     "company": "Photosnap",
-//     "logo": "/images/photosnap.svg",
-//     "new": true,
-//     "featured": true,
-//     "position": "Senior Frontend Developer",
-//     "role": "Frontend",
-//     "level": "Senior",
-//     "postedAt": "1d ago",
-//     "contract": "Full Time",
-//     "location": "USA Only",
-//     "languages": ["HTML", "CSS", "JavaScript"],
-//     "tools": []
-
 function JobBoard({
   job: {
     company,
@@ -41,17 +27,17 @@ function JobBoard({
   }
   return (
     <div
-      className={`flex flex-col sm:flex-row sm:items-center justify-between bg-white shadow-md mx-4 p-4 mb-16 sm:mb-6 rounded ${
+      className={`flex flex-col lg:flex-row lg:items-center justify-between bg-white shadow-md mx-4 p-4 mb-16 lg:mb-6 rounded ${
         featured && "border-l-4 border-teal-500 border-solid"
       }`}
     >
-      <div className="flex flex-col mb-4 sm:flex-row">
+      <div className="flex flex-col mb-4 lg:flex-row">
         <img
-          className="w-14 h-14 -mt-12 mb-4 sm:mt-0 sm:w-20 sm:h-20 sm:mb-0"
+          className="w-14 h-14 -mt-12 mb-4 lg:mt-0 lg:w-20 lg:h-20 lg:mb-0"
           src={`/assets${logo}`}
           alt={company}
         />
-        <div className="ml-1 sm:ml-4 ">
+        <div className="ml-1 lg:ml-4 ">
           <h3 className="text-teal-500 font-bold">
             {company}
             {isNew && (
@@ -71,7 +57,7 @@ function JobBoard({
           </p>
         </div>
       </div>
-      <div className=" border-t-2 py-5 flex flex-wrap sm:border-0 justify-items-end pr-2">
+      <div className=" border-t-2 py-5 flex flex-wrap lg:border-0 justify-items-end pr-2">
         {tags
           ? tags.map((tag) => (
               <span
